@@ -1,10 +1,18 @@
 <mat-drawer-container [hasBackdrop]="false" class="example-container" autosize>
   <mat-drawer [opened]="navState" class="example-sidenav" [mode]="over" >
-    Toggle extra text
+    <mat-list>
+      <div mat-subheader>Sitemap</div>
+      <mat-list-item *ngFor="let page of pages" class="hover" [routerLink]="page.link">
+        <mat-icon mat-list-icon>{{page.icon}}</mat-icon>
+        <div mat-line>{{page.name}}</div>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
   </mat-drawer>
 
   <div class="example-sidenav-content">
-    <app-home></app-home>
+<!--    <app-home></app-home>-->
+    <router-outlet></router-outlet>
   </div>
 
 </mat-drawer-container>
