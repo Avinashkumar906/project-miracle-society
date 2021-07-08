@@ -1,0 +1,14 @@
+:host{
+  width: 100%;
+}
+.carousel-container{
+  display: flex;
+  height: calc(100vh - 56px);
+}
+.slide{
+  height: 100%;
+  width: 100%;
+  background-position: top center;
+  overflow: hidden;
+}
+

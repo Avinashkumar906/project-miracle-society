@@ -1,0 +1,9 @@
+<div class="layout">
+  <div class="header">
+    <app-header (toggleSidebar)="toggleSidenav()"></app-header>
+  </div>
+  <div class="content">
+    <app-content [sideNavState]="sidenav"></app-content>
+  </div>
+</div>
+
